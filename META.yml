@@ -1,0 +1,32 @@
+--- #YAML:1.0
+name:               Text-Corpus-Summaries-Wikipedia
+version:            0.20
+abstract:           Creates corpora for summarization testing.
+author:
+    - Jeff Kubina (jeff.kubina@gmail.com)
+license:            perl
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
+requires:
+    Data::Dump:           1.15
+    Date::Manip:          6.11
+    File::Slurp:          9999.13
+    Forks::Super:         0.30
+    HTML::TreeBuilder::XPath:  0.11
+    Log::Log4perl:        1.28
+    LWP::Simple:          5.827
+    LWP::UserAgent:       5.834
+    Statistics::Descriptive:  3.0100
+    XML::Code:            0.4
+    XML::Simple:          2.18
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.56
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4

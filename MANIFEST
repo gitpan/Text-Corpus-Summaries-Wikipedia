@@ -1,0 +1,11 @@
+MANIFEST
+README
+LICENSE
+Todo
+Changes
+Makefile.PL
+lib/Text/Corpus/Summaries/Wikipedia.pm
+scripts/create_summary_corpus.pl
+scripts/examples_Text_Corpus_Summaries_Wikipedia.pl
+t/001_test.t
+META.yml                                 Module meta-data (added by MakeMaker)
