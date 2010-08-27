@@ -2,3 +2,6 @@ Revision history for Perl module Text::Corpus::Summaries::Wikipedia
 
 0.20 Aug 20 2010
     - First release to CPAN.
+
+0.21 Aug 27 2010
+    - Added File::Path(2.08) to Makefile.PL.
