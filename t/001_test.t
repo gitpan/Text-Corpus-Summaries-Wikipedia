@@ -21,7 +21,7 @@ if (%ENV && exists ($ENV{TEXT_CORPUS_SUMMARIES_WIKIPEDIA_FULL_TESTING}) && $ENV{
   ok (defined $testContent, 'Testing network access.');
 
   # let the user know this may take some time.
-  diag ("Following tests can take a few minutes.\n");
+  diag ("Following tests can take a 10 to 30 minutes.\n");
 
   # get the list of all supported language codes.
   my @listOfLanguageCodes = Text::Corpus::Summaries::Wikipedia::getListOfSupportedLanguageCodes();

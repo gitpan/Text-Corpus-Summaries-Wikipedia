@@ -10,11 +10,11 @@ SYNOPSIS
       dump $corpus->getListOfXmlFiles;
 
 DESCRIPTION
-    "Text::Corpus::Summaries::Wikipedia" creates corpora for summarization
-    testing using the featured articles of various Wikipedias.
+    "Text::Corpus::Summaries::Wikipedia" creates corpora for single document
+    summarization testing using the featured articles of various Wikipedias.
 
     A criterion for an article in a Wikipedia to be *featured* is that it
-    have a well written lead section, or introduction; thus, the featured
+    have a well written lead section, or introduction. So the featured
     articles of a Wikipedia can make an excellent corpus for testing single
     document summarization methods. This module creates a corpus from the
     featured articles of a Wikipedia by fetching and saving their content as
@@ -32,17 +32,22 @@ CONSTRUCTOR
 
         "languageCode" is the language code of the Wikipedia from which the
         corpus of featured articles are to be created. The supported
-        language codes are "af":Afrikaans, "ar":Arabic, "bg":Bulgarian,
-        "ca":Catalan, "cs":Czech, "de":German, "el":Greek, "en":English,
-        "eo":Esperanto, "es":Spanish, "eu":Basque, "fa":Persian,
-        "fi":Finnish, "fr":French, "he":Hebrew, "hr":Croatian,
+        language codes are "af":Afrikaans, "ar":Arabic, "az":Azerbaijani,
+        "bg":Bulgarian, "bs":Bosnian, "ca":Catalan, "cs":Czech, "de":German,
+        "el":Greek, "en":English, "eo":Esperanto, "es":Spanish, "eu":Basque,
+        "fa":Persian, "fi":Finnish, "fr":French, "he":Hebrew, "hr":Croatian,
         "hu":Hungarian, "id":Indonesian, "it":Italian, "ja":Japanese,
-        "ka":Georgian, "ko":Korean, "ml":Malayalam, "mr":Marathi,
-        "ms":Malay, "nl":Dutch, "nn":Norwegian, "no":Norwegian, "pl":Polish,
-        "pt":Portuguese, "ro":Romanian, "ru":Russian, "sh":Serbocroatian,
-        "sk":Slovak, "sl":Slovenian, "sr":Serbian, "sv":Swedish, "th":Thai,
-        "tr":Turkish, "vi":Vietnamese, and "zh":Chinese. The default is
-        "en".
+        "jv":Javanese, "ka":Georgian, "kk":Kazakh, "km":Khmer, "ko":Korean,
+        "li":Limburgish, "lv":Latvian, "ml":Malayalam, "mr":Marathi,
+        "ms":Malay, "mzn":Mazandarani, "nl":Dutch, "nn":Norwegian (Nynorsk),
+        "no":Norwegian (Bokm?l), "pl":Polish, "pt":Portuguese,
+        "ro":Romanian, "ru":Russian, "sh":Serbo-Croatian, "simple":Simple
+        English, "sk":Slovak, "sl":Slovenian, "sr":Serbian, "sv":Swedish,
+        "sw":Swahili, "ta":Tamil, "th":Thai, "tl":Tagalog, "tr":Turkish,
+        "tt":Tatar, "uk":Ukrainian, "ur":Urdu, "vi":Vietnamese,
+        "vo":Volap?k, and "zh":Chinese. If the language code is "all", then
+        the corpus for each supported language is created (which takes a
+        long time). The default is "en".
 
     "corpusDirectory"
          corpusDirectory => 'cwd'
@@ -148,6 +153,7 @@ XML FORMAT
     outlined below:
 
       <document>
+        <title>The Article Title</title>
         <summary>
           <p>This is the first paragraph of the summary.</p>
           <p>This is the second paragraph of the summary.</p>
@@ -206,14 +212,10 @@ SCRIPTS
     testing using this module.
 
 INSTALLATION
-    To install the module run the following commands:
+    Use CPAN to install the module and all its prerequisites:
 
-      perl Makefile.PL
-      make
-      make test
-      make install
-
-    If you are on a windows box you should use 'nmake' rather than 'make'.
+      perl -MCPAN -e shell
+      >install Text::Corpus::Summaries::Wikipedia
 
 BUGS
     This module creates corpora by parsing Wikipedia pages, the xpath
